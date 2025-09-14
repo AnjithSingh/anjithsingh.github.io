@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjith Kumar Singh | Data Analyst Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #333;
+      --primary: #2563eb;
+      --secondary: #4f46e5;
+      --card-bg: #fff;
+      --contact-bg: #4f46e5;
+      --contact-text: #fff;
+    }
+    body.dark {
+      --bg: #1e1e2f;
+      --text: #eaeaea;
+      --primary: #60a5fa;
+      --secondary: #818cf8;
+      --card-bg: #2a2a40;
+      --contact-bg: #111827;
+      --contact-text: #eaeaea;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif; line-height: 1.6;
+      background: var(--bg); color: var(--text); transition: all 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white; text-align: center; padding: 60px 20px; position: relative;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; margin-bottom: 15px; }
+    header .btn {
+      display: inline-block; margin: 10px; padding: 10px 20px;
+      background: white; color: var(--primary); border-radius: 5px;
+      text-decoration: none; font-weight: bold; transition: 0.3s;
+    }
+    header .btn:hover { background: #f3f4f6; }
+
+    /* Dark mode toggle */
+    .toggle-btn {
+      position: absolute; top: 20px; right: 20px;
+      padding: 8px 14px; border: none; border-radius: 5px;
+      background: white; color: var(--primary); font-weight: bold;
+      cursor: pointer; transition: 0.3s;
+    }
+    .toggle-btn:hover { background: #f3f4f6; }
+
+    /* Sections */
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: var(--primary); }
+
+    /* Cards */
+    .skills, .projects { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+    }
+    .card {
+      background: var(--card-bg); padding: 20px; border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;
+      opacity: 0; transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    .card.show { opacity: 1; transform: translateY(0); }
+    .card h3 { margin-bottom: 10px; color: var(--secondary); }
+
+    /* Contact */
+    .contact {
+      background: var(--contact-bg); color: var(--contact-text);
+      text-align: center; padding: 40px 20px;
+    }
+    .contact p { margin: 10px 0; }
+
+    footer {
+      text-align: center; padding: 20px;
+      font-size: 0.9rem; background: #f3f4f6;
+    }
+    body.dark footer { background: #111827; color: #aaa; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <h1>Anjith Kumar Singh</h1>
+    <p>Turning raw data into actionable insights</p>
+    <p>Aspiring Data Analyst | IIT Madras</p>
+    <a href="C:\Users\anshu\Downloads\Portfolio_Anjith\Resume.pdf" download="C:\Users\anshu\Downloads\Portfolio_Anjith\Resume.pdf"  class="btn">Download Resume</a>
+    <a href="#projects" class="btn">View Projects</a>
+  </header>
+
+  <!-- About Me -->
+  <section>
+    <h2>About Me</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Hi, I’m <strong>Anjith Kumar Singh</strong>. Currently pursuing my B.Sc. in Data Science and Applications 
+      from IIT Madras, I am passionate about solving real-world problems using data. 
+      My goal is to leverage data cleaning, analysis, and visualization techniques 
+      to uncover hidden patterns and support decision-making.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">Python (NumPy, Pandas, Matplotlib, Seaborn)</div>
+      <div class="card">SQL (MySQL, PostgreSQL)</div>
+      <div class="card">Power BI & Excel Dashboards</div>
+      <div class="card">Data Cleaning & Preprocessing</div>
+      <div class="card">Exploratory Data Analysis (EDA)</div>
+      <div class="card">Problem Solving & Communication</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <a href = 'https://1drv.ms/x/c/534b7961c450123e/Ec4Os9ZRAzNNjd47LmbIJrEBgpXUkSIqVg3xPcKekN1xXw?e=wGqLI0' style= "text-decoration: none;"><h3>Excel Dashboard</h3>
+        <p style="color: black;" >Built automated reports with pivot tables and slicers for real-time decision support.</p></a>
+      </div>
+      <div class="card">
+        <a href = "https://colab.research.google.com/drive/1Ze4tWL2k4_lSFYtdcKOLPPsSCwcXeJiH?usp=sharing"  style= "text-decoration: none;" ><h3>Data Cleaning with Python</h3>
+        <p style="color: black;">Processed messy datasets, handled missing values, and performed feature transformations.</p></a>
+      </div>
+      <div class="card">
+        <h3>SQL Analysis Project</h3>
+        <p>Wrote complex SQL queries to derive insights on customer retention and performance.</p>
+      </div>
+      <div class="card">
+        <h3>Sales Dashboard (Power BI)</h3>
+        <p>Designed an interactive dashboard to track revenue, profit, and customer trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <p style="text-align:center; font-size: 1.1rem;">
+      🎓 B.Sc. in Data Science & Applications <br>
+      <strong>Indian Institute of Technology, Madras</strong>
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2 style="color:#111827;">Contact Me</h2>
+    <p>📧 Email: anjithsingh1t@gmail.com</p>
+    <p>LinkedIn: <a href = "https://www.linkedin.com/feed/">Click Here</a></p>
+    <p>GitHub: <a href = "https://github.com/AnjithSingh"> Click Here</p>
+  </section>
+
+  <footer>
+    © 2025 Anjith Kumar Singh | Data Analyst Portfolio
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      btn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+
+    // Scroll animation for cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".card").forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
+
+
+
+
+
